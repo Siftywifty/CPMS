@@ -1,0 +1,116 @@
+.dash {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.dash-hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--harbor);
+  margin: 0 0 0.4rem;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.btn-primary {
+  background: var(--harbor);
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.btn-primary:hover { background: var(--harbor-dark); }
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-tile {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.stat-tile--accent { border-color: var(--amber); background: var(--amber-tint); }
+
+.stat-value { font-size: 1.6rem; font-weight: 500; }
+.stat-label { font-size: 0.8rem; color: var(--slate); }
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+.panel-head h2 { font-size: 1.1rem; font-weight: 500; }
+
+.link { color: var(--harbor); font-size: 0.85rem; text-decoration: none; }
+.link:hover { text-decoration: underline; }
+
+.empty-state { color: var(--slate); font-size: 0.9rem; padding: 1.5rem 0; }
+
+.job-row, .app-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--line);
+}
+.job-row:first-of-type, .app-row:first-of-type { border-top: none; }
+
+.job-title, .app-name { margin: 0; font-weight: 500; font-size: 0.95rem; }
+.job-meta, .app-job { margin: 0.15rem 0 0; font-size: 0.8rem; color: var(--slate); }
+
+.status-pill {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.status-Open { background: var(--harbor-tint); color: var(--harbor-dark); }
+.status-Closed { background: var(--line); color: var(--slate); }
+.status-Cancelled { background: var(--danger-tint); color: var(--danger); }
+.status-Applied { background: var(--line); color: var(--slate); }
+.status-Shortlisted { background: var(--harbor-tint); color: var(--harbor-dark); }
+.status-InterviewScheduled { background: var(--amber-tint); color: var(--amber); }
+.status-Selected { background: var(--harbor); color: #fff; }
+.status-Rejected { background: var(--danger-tint); color: var(--danger); }
+
+@media (max-width: 640px) {
+  .stat-row { grid-template-columns: repeat(2, 1fr); }
+}

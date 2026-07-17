@@ -1,0 +1,66 @@
+<section class="profile">
+
+  <h1>Student Profile</h1>
+
+  <div class="card">
+
+    <div class="row">
+      <label>First Name</label>
+      <span>{{student.firstName}}</span>
+    </div>
+
+    <div class="row">
+      <label>Last Name</label>
+      <span>{{student.lastName}}</span>
+    </div>
+
+    <div class="row">
+      <label>Email</label>
+      <span>{{student.email}}</span>
+    </div>
+
+    <div class="row">
+      <label>Phone</label>
+      <span>{{student.phone}}</span>
+    </div>
+
+    <div class="row">
+      <label>Roll Number</label>
+      <span>{{student.rollNumber}}</span>
+    </div>
+
+    <div class="row">
+      <label>Course</label>
+      <span>{{student.course}}</span>
+    </div>
+
+    <div class="row">
+      <label>Department</label>
+      <span>{{student.department}}</span>
+    </div>
+
+    <div class="row">
+      <label>CGPA</label>
+      <span>{{student.cgpa}}</span>
+    </div>
+
+    <div class="row">
+      <label>Address</label>
+      <span>{{student.address}}</span>
+    </div>
+
+    <div class="skills">
+
+      <h3>Skills</h3>
+
+      <span class="skill" *ngFor="let skill of student.skills">
+        {{skill}}
+      </span>
+
+    </div>
+
+    <button>Edit Profile</button>
+
+  </div>
+
+</section>

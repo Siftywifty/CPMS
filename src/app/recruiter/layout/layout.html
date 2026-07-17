@@ -1,0 +1,41 @@
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <h2>Recruiter</h2>
+
+        <a routerLink="/recruiter/dashboard" routerLinkActive="active">
+            Dashboard
+        </a>
+
+        <a routerLink="/recruiter/company-profile" routerLinkActive="active">
+            Company Profile
+        </a>
+
+        <a routerLink="/recruiter/job-posting" routerLinkActive="active">
+            Job Posting
+        </a>
+
+        <a routerLink="/recruiter/candidate-search" routerLinkActive="active">
+            Candidate Search
+        </a>
+
+        <a routerLink="/recruiter/interview-scheduling" routerLinkActive="active">
+            Interview Scheduling
+        </a>
+
+    </aside>
+
+    <main class="content">
+
+        <header class="topbar">
+
+            <h1>Recruiter Portal</h1>
+
+        </header>
+
+        <router-outlet></router-outlet>
+
+    </main>
+
+</div>

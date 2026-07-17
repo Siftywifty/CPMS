@@ -1,0 +1,21 @@
+<section class="jobs">
+
+    <h1>Available Jobs</h1>
+
+    <div class="job-card" *ngFor="let job of jobs">
+
+        <h2>{{job.role}}</h2>
+
+        <p><strong>Company:</strong> {{job.company}}</p>
+
+        <p><strong>Location:</strong> {{job.location}}</p>
+
+        <p><strong>Package:</strong> {{job.package}}</p>
+
+        <p><strong>Last Date:</strong> {{job.deadline}}</p>
+
+        <button>Apply Now</button>
+
+    </div>
+
+</section>

@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root{
+
+  --surface:#ffffff;
+  --line:#e5e7eb;
+
+  --ink:#111827;
+  --slate:#6b7280;
+
+  --harbor:#2563eb;
+  --harbor-dark:#1d4ed8;
+  --harbor-tint:#dbeafe;
+
+  --amber:#f59e0b;
+  --amber-tint:#fef3c7;
+
+  --danger:#dc2626;
+  --danger-tint:#fee2e2;
+
+  --radius-sm:8px;
+  --radius-md:12px;
+  --radius-lg:18px;
+
+  --font-mono:Consolas, monospace;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+background:#f7f8fc;
+color:#111827;
+
+}

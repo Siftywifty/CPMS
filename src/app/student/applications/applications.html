@@ -1,0 +1,32 @@
+<section class="applications">
+
+    <h1>My Applications</h1>
+
+    <div class="application-card" *ngFor="let app of applications">
+
+        <h2>{{ app.role }}</h2>
+
+        <p><strong>Company:</strong> {{ app.company }}</p>
+
+        <p><strong>Applied On:</strong> {{ app.date }}</p>
+
+        <p>
+            <strong>Status:</strong>
+
+            <span
+                class="status"
+                [ngClass]="{
+                    'applied': app.status === 'Applied',
+                    'interview': app.status === 'Interview Scheduled',
+                    'selected': app.status === 'Selected'
+                }">
+
+                {{ app.status }}
+
+            </span>
+
+        </p>
+
+    </div>
+
+</section>

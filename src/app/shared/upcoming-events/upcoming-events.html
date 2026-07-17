@@ -1,0 +1,25 @@
+<div class="events-card">
+
+    <h2>Upcoming Events</h2>
+
+    <div
+    class="event"
+    *ngFor="let e of events">
+
+        <div class="date">
+
+            {{e.date}}
+
+        </div>
+
+        <div class="details">
+
+            <h4>{{e.title}}</h4>
+
+            <span>{{e.type}}</span>
+
+        </div>
+
+    </div>
+
+</div>

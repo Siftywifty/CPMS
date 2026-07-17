@@ -1,0 +1,63 @@
+.resume{
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.resume h1{
+    margin-bottom:20px;
+}
+
+.card{
+
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+
+}
+
+.card p{
+
+    margin:15px 0;
+    font-size:17px;
+
+}
+
+.status{
+
+    color:green;
+    font-weight:bold;
+
+}
+
+button{
+
+    margin-top:20px;
+    margin-right:15px;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    background:#1976d2;
+
+    color:white;
+
+}
+
+.download{
+
+    background:#2e7d32;
+
+}
+
+button:hover{
+
+    opacity:.9;
+
+}

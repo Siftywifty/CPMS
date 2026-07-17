@@ -1,0 +1,100 @@
+<section class="training-page">
+
+<div class="header">
+
+<div>
+
+<p class="eyebrow">
+
+Placement Cell
+
+</p>
+
+<h1>
+
+Training Programs
+
+</h1>
+
+</div>
+
+</div>
+
+<div class="form">
+
+<input
+placeholder="Program Name"
+[(ngModel)]="title">
+
+<input
+placeholder="Trainer / Company"
+[(ngModel)]="trainer">
+
+<input
+type="date"
+[(ngModel)]="date">
+
+<input
+placeholder="Duration"
+[(ngModel)]="duration">
+
+<select [(ngModel)]="mode">
+
+<option>Offline</option>
+
+<option>Online</option>
+
+<option>Hybrid</option>
+
+</select>
+
+<button
+(click)="addTraining()">
+
+Add Training
+
+</button>
+
+</div>
+
+<div class="card"
+
+*ngFor="let t of trainings">
+
+<div>
+
+<h3>{{t.title}}</h3>
+
+<p>Trainer : {{t.trainer}}</p>
+
+<p>Date : {{t.date}}</p>
+
+<p>Duration : {{t.duration}}</p>
+
+</div>
+
+<div>
+
+<span class="mode">
+
+{{t.mode}}
+
+</span>
+
+<br><br>
+
+<button
+
+class="delete"
+
+(click)="remove(t)">
+
+Delete
+
+</button>
+
+</div>
+
+</div>
+
+</section>

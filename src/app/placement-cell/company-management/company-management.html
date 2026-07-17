@@ -1,0 +1,87 @@
+<section class="company-page">
+
+    <div class="header">
+
+        <div>
+
+            <p class="eyebrow">Placement Cell</p>
+
+            <h1>Company Management</h1>
+
+        </div>
+
+    </div>
+
+    <input
+    class="search"
+    placeholder="Search company..."
+    [(ngModel)]="search">
+
+    <div class="table">
+
+        <div class="table-head">
+
+            <span>Company</span>
+
+            <span>Industry</span>
+
+            <span>City</span>
+
+            <span>Status</span>
+
+            <span>Action</span>
+
+        </div>
+
+        <div
+        class="table-row"
+        *ngFor="let company of filteredCompanies">
+
+            <span>{{company.name}}</span>
+
+            <span>{{company.industry}}</span>
+
+            <span>{{company.city}}</span>
+
+            <span>
+
+                <span
+                class="badge"
+
+                [class.approved]="company.status=='Approved'"
+
+                [class.pending]="company.status=='Pending'"
+
+                [class.rejected]="company.status=='Rejected'">
+
+                    {{company.status}}
+
+                </span>
+
+            </span>
+
+            <span>
+
+                <button
+                class="approve"
+                (click)="approve(company)">
+
+                    Approve
+
+                </button>
+
+                <button
+                class="reject"
+                (click)="reject(company)">
+
+                    Reject
+
+                </button>
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,39 @@
+<div class="profile-wrapper">
+
+    <div class="profile-card" (click)="toggleMenu()">
+
+        <div class="avatar">
+
+            {{userName.charAt(0)}}
+
+        </div>
+
+        <div>
+
+            <h4>{{userName}}</h4>
+
+            <small>{{role}}</small>
+
+        </div>
+
+        ▼
+
+    </div>
+
+    <div class="dropdown" *ngIf="showMenu">
+
+        <a routerLink="/profile">👤 My Profile</a>
+
+        <a routerLink="/settings">⚙ Settings</a>
+
+        <a>❓ Help</a>
+
+        <button (click)="logout()">
+
+            🚪 Logout
+
+        </button>
+
+    </div>
+
+</div>

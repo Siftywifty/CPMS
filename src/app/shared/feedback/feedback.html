@@ -1,0 +1,77 @@
+<div class="feedback-container">
+
+    <div class="feedback-card">
+
+        <h2>Student Feedback</h2>
+
+        <p>Share your placement experience with us.</p>
+
+        <label>Student Name</label>
+
+        <input
+        type="text"
+        [(ngModel)]="feedback.name">
+
+        <label>Company Name</label>
+
+        <input
+        type="text"
+        [(ngModel)]="feedback.company">
+
+        <label>Rating</label>
+
+        <select
+        [(ngModel)]="feedback.rating">
+
+            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+
+            <option value="4">⭐⭐⭐⭐ Good</option>
+
+            <option value="3">⭐⭐⭐ Average</option>
+
+            <option value="2">⭐⭐ Poor</option>
+
+            <option value="1">⭐ Very Poor</option>
+
+        </select>
+
+        <label>Feedback</label>
+
+        <textarea
+        rows="5"
+        [(ngModel)]="feedback.message">
+
+        </textarea>
+
+        <button
+        (click)="submitFeedback()">
+
+            Submit Feedback
+
+        </button>
+
+    </div>
+
+    <div
+    class="feedback-list"
+    *ngIf="feedbackList.length>0">
+
+        <h2>Recent Feedback</h2>
+
+        <div
+        class="item"
+        *ngFor="let item of feedbackList">
+
+            <h3>{{item.name}}</h3>
+
+            <p><b>Company:</b> {{item.company}}</p>
+
+            <p><b>Rating:</b> ⭐ {{item.rating}} / 5</p>
+
+            <p>{{item.message}}</p>
+
+        </div>
+
+    </div>
+
+</div>

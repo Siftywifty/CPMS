@@ -1,0 +1,78 @@
+<section class="announcement-page">
+
+<h1>Announcements</h1>
+
+<div class="form">
+
+<input
+type="text"
+placeholder="Announcement Title"
+[(ngModel)]="title">
+
+<textarea
+rows="4"
+placeholder="Announcement Description"
+[(ngModel)]="description">
+</textarea>
+
+<select [(ngModel)]="priority">
+
+<option>High</option>
+
+<option>Medium</option>
+
+<option>Low</option>
+
+</select>
+
+<button (click)="addAnnouncement()">
+
+Add Announcement
+
+</button>
+
+</div>
+
+<div class="card"
+
+*ngFor="let item of announcements;let i=index">
+
+<div>
+
+<h3>{{item.title}}</h3>
+
+<p>{{item.description}}</p>
+
+<small>{{item.date}}</small>
+
+</div>
+
+<div>
+
+<span class="priority"
+
+[class.high]="item.priority=='High'"
+
+[class.medium]="item.priority=='Medium'"
+
+[class.low]="item.priority=='Low'">
+
+{{item.priority}}
+
+</span>
+
+<button
+
+class="delete"
+
+(click)="deleteAnnouncement(i)">
+
+Delete
+
+</button>
+
+</div>
+
+</div>
+
+</section>

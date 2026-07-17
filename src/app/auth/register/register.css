@@ -1,0 +1,315 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.register-container{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#2563eb,#1e3a8a,#4f46e5);
+
+}
+
+/* ==========================
+LEFT PANEL
+========================== */
+
+.left-panel{
+
+    width:45%;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px;
+
+}
+
+.overlay h1{
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+    line-height:1.2;
+
+}
+
+.overlay p{
+
+    font-size:18px;
+
+    line-height:30px;
+
+    opacity:.95;
+
+    margin-bottom:35px;
+
+}
+
+.overlay ul{
+
+    list-style:none;
+
+}
+
+.overlay li{
+
+    margin:18px 0;
+
+    font-size:18px;
+
+}
+
+/* ==========================
+RIGHT PANEL
+========================== */
+
+.right-panel{
+
+    width:55%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+/* ==========================
+CARD
+========================== */
+
+.register-card{
+
+    width:100%;
+
+    max-width:600px;
+
+    background:rgba(255,255,255,.96);
+
+    border-radius:22px;
+
+    padding:45px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+    backdrop-filter:blur(12px);
+
+}
+
+.register-card h2{
+
+    font-size:34px;
+
+    color:#1e293b;
+
+    margin-bottom:8px;
+
+}
+
+.subtitle{
+
+    color:#64748b;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+FORM
+========================== */
+
+.row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+.input-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:20px;
+
+}
+
+.input-box label{
+
+    font-size:14px;
+
+    margin-bottom:8px;
+
+    color:#475569;
+
+    font-weight:600;
+
+}
+
+.input-box input,
+
+.input-box select{
+
+    padding:14px 16px;
+
+    border:1px solid #dbe3ef;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    background:#f8fafc;
+
+}
+
+.input-box input:focus,
+
+.input-box select:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    background:white;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/* ==========================
+BUTTON
+========================== */
+
+button{
+
+    width:100%;
+
+    margin-top:10px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.30);
+
+}
+
+/* ==========================
+LOGIN LINK
+========================== */
+
+.login-link{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#64748b;
+
+}
+
+.login-link a{
+
+    color:#2563eb;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+}
+
+.login-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+.left-panel{
+
+display:none;
+
+}
+
+.right-panel{
+
+width:100%;
+
+padding:30px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.row{
+
+grid-template-columns:1fr;
+
+}
+
+.register-card{
+
+padding:30px 20px;
+
+}
+
+.register-card h2{
+
+font-size:28px;
+
+}
+
+}

@@ -1,0 +1,43 @@
+<section class="interviews">
+
+  <header class="interviews-head">
+    <p class="eyebrow">This week</p>
+    <h1>Interview schedule</h1>
+  </header>
+
+  <p class="empty-state" *ngIf="!isLoading && interviews.length === 0">
+    No interviews scheduled yet. Shortlist a candidate from Candidate Search to schedule one.
+  </p>
+
+  <div class="interview-list">
+    <article class="interview-card" *ngFor="let interview of interviews">
+      <div class="interview-top">
+        <div>
+          <p class="round-name">{{ interview.roundName }}</p>
+          <p class="interview-time mono">{{ interview.scheduledAt | date:'medium' }}</p>
+        </div>
+        <span class="mode-tag">{{ interview.mode }}</span>
+      </div>
+
+      <p class="venue" *ngIf="interview.venue">{{ interview.venue }}</p>
+      <a class="venue link" *ngIf="interview.meetingLink" [href]="interview.meetingLink" target="_blank">Join meeting</a>
+
+      <div class="feedback-block" *ngIf="interview.status === 'Scheduled'">
+        <select [(ngModel)]="feedbackDraft[interview.scheduleId].result">
+          <option value="">Result</option>
+          <option value="Pass">Pass</option>
+          <option value="Fail">Fail</option>
+          <option value="OnHold">On hold</option>
+        </select>
+        <textarea rows="2" placeholder="Feedback notes" [(ngModel)]="feedbackDraft[interview.scheduleId].feedback"></textarea>
+        <button class="btn-secondary" (click)="submitFeedback(interview)">Submit feedback</button>
+      </div>
+
+      <div class="feedback-result" *ngIf="interview.status === 'Completed'">
+        <span class="result-pill" [ngClass]="'result-' + interview.result">{{ interview.result }}</span>
+        <p class="feedback-text">{{ interview.feedback }}</p>
+      </div>
+    </article>
+  </div>
+
+</section>

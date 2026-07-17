@@ -1,0 +1,137 @@
+<div class="login-container">
+
+    <!-- Left Panel -->
+
+    <div class="left-panel">
+
+        <div class="overlay">
+
+            <h1>College Placement Portal</h1>
+
+            <p>
+                Welcome back! Login to access the Placement Management
+                System and manage students, recruiters, and placement
+                activities efficiently.
+            </p>
+
+            <ul>
+
+                <li>✔ Student Placement Tracking</li>
+
+                <li>✔ Company Recruitment</li>
+
+                <li>✔ Interview Scheduling</li>
+
+                <li>✔ Placement Analytics</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Right Panel -->
+
+    <div class="right-panel">
+
+        <div class="login-card">
+
+            <h2>Welcome Back</h2>
+
+            <p class="subtitle">
+                Sign in to continue
+            </p>
+
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+                <!-- Email -->
+
+                <div class="input-box">
+
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        formControlName="email"
+                        placeholder="example@gmail.com">
+
+                </div>
+
+                <!-- Password -->
+
+                <div class="input-box">
+
+                    <label>Password</label>
+
+                    <input
+                        [type]="hidePassword ? 'password' : 'text'"
+                        formControlName="password"
+                        placeholder="Enter Password">
+
+                </div>
+
+                <!-- Role -->
+
+                <div class="input-box">
+
+                    <label>Select Role</label>
+
+                    <select formControlName="role">
+
+                        <option value="Student">Student</option>
+
+                        <option value="Recruiter">Recruiter</option>
+
+                        <option value="Placement Cell">Placement Cell</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Remember + Forgot -->
+
+                <div class="extra">
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Remember Me
+
+                    </label>
+
+                    <a routerLink="/forgot-password">
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+                <!-- Login Button -->
+
+                <button type="submit">
+
+                    Login
+
+                </button>
+
+            </form>
+
+            <div class="register-link">
+
+                Don't have an account?
+
+                <a routerLink="/register">
+
+                    Register
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

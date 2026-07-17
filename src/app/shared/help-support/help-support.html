@@ -1,0 +1,85 @@
+<div class="support-container">
+
+    <div class="support-card">
+
+        <h2>Help & Support</h2>
+
+        <p>Raise a support request for any issue.</p>
+
+        <label>Name</label>
+
+        <input
+        type="text"
+        [(ngModel)]="ticket.name">
+
+        <label>Subject</label>
+
+        <input
+        type="text"
+        [(ngModel)]="ticket.subject">
+
+        <label>Category</label>
+
+        <select
+        [(ngModel)]="ticket.category">
+
+            <option>Technical</option>
+
+            <option>Placement Drive</option>
+
+            <option>Resume</option>
+
+            <option>Interview</option>
+
+            <option>Training</option>
+
+            <option>Other</option>
+
+        </select>
+
+        <label>Message</label>
+
+        <textarea
+        rows="5"
+        [(ngModel)]="ticket.message">
+
+        </textarea>
+
+        <button
+        (click)="submitTicket()">
+
+            Submit Ticket
+
+        </button>
+
+    </div>
+
+    <div
+    class="ticket-list"
+    *ngIf="tickets.length>0">
+
+        <h2>My Support Tickets</h2>
+
+        <div
+        class="ticket"
+        *ngFor="let item of tickets">
+
+            <h3>{{item.subject}}</h3>
+
+            <p><b>Name:</b> {{item.name}}</p>
+
+            <p><b>Category:</b> {{item.category}}</p>
+
+            <p>{{item.message}}</p>
+
+            <span class="status">
+
+                {{item.status}}
+
+            </span>
+
+        </div>
+
+    </div>
+
+</div>

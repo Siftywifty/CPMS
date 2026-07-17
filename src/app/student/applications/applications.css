@@ -1,0 +1,63 @@
+.applications{
+
+    max-width:1000px;
+    margin:30px auto;
+    padding:20px;
+
+}
+
+.applications h1{
+
+    margin-bottom:25px;
+
+}
+
+.application-card{
+
+    background:#fff;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+
+}
+
+.application-card h2{
+
+    color:#1976d2;
+    margin-bottom:10px;
+
+}
+
+.application-card p{
+
+    margin:8px 0;
+
+}
+
+.status{
+
+    padding:6px 12px;
+    border-radius:20px;
+    color:white;
+    font-size:14px;
+
+}
+
+.applied{
+
+    background:#ff9800;
+
+}
+
+.interview{
+
+    background:#2196f3;
+
+}
+
+.selected{
+
+    background:#4caf50;
+
+}

@@ -1,0 +1,96 @@
+.interviews {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--harbor);
+  margin: 0 0 0.4rem;
+}
+
+.interviews-head h1 { font-size: 1.9rem; font-weight: 500; margin-bottom: 1.75rem; }
+
+.empty-state { color: var(--slate); font-size: 0.9rem; text-align: center; padding: 2rem 0; }
+
+.interview-list { display: flex; flex-direction: column; gap: 0.9rem; }
+
+.interview-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.3rem;
+}
+
+.interview-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.6rem;
+}
+
+.round-name { margin: 0; font-weight: 500; font-size: 0.95rem; }
+.interview-time { margin: 0.2rem 0 0; font-size: 0.8rem; color: var(--slate); }
+
+.mode-tag {
+  font-size: 0.72rem;
+  background: var(--harbor-tint);
+  color: var(--harbor-dark);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+
+.venue { font-size: 0.85rem; color: var(--slate); margin: 0 0 0.8rem; }
+.link { color: var(--harbor); text-decoration: none; display: inline-block; }
+.link:hover { text-decoration: underline; }
+
+.feedback-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+}
+
+select, textarea {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  background: var(--paper);
+  color: var(--ink);
+}
+select:focus, textarea:focus { outline: none; border-color: var(--harbor); }
+
+.btn-secondary {
+  align-self: flex-end;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.feedback-result {
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+}
+
+.result-pill {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+}
+.result-Pass { background: var(--harbor-tint); color: var(--harbor-dark); }
+.result-Fail { background: var(--danger-tint); color: var(--danger); }
+.result-OnHold { background: var(--amber-tint); color: var(--amber); }
+
+.feedback-text { margin: 0.6rem 0 0; font-size: 0.85rem; color: var(--slate); }

@@ -1,0 +1,164 @@
+<section class="form-page">
+
+  <header class="form-head">
+    <p class="eyebrow">New posting</p>
+    <h1>Post a job</h1>
+  </header>
+
+  <form (ngSubmit)="onSubmit()" class="card-form">
+
+    <div class="field">
+
+        <label>Job Title</label>
+
+        <input
+        type="text"
+        [(ngModel)]="job.jobTitle"
+        name="jobTitle">
+
+    </div>
+
+    <div class="field-row">
+
+        <div class="field">
+
+            <label>Job Type</label>
+
+            <select
+            [(ngModel)]="job.jobType"
+            name="jobType">
+
+                <option>Full-Time</option>
+
+                <option>Internship</option>
+
+                <option>Internship + PPO</option>
+
+            </select>
+
+        </div>
+
+        <div class="field">
+
+            <label>Location</label>
+
+            <input
+            type="text"
+            [(ngModel)]="job.location"
+            name="location">
+
+        </div>
+
+    </div>
+
+    <div class="field">
+
+        <label>Description</label>
+
+        <textarea
+        rows="4"
+        [(ngModel)]="job.jobDescription"
+        name="jobDescription">
+        </textarea>
+
+    </div>
+
+    <div class="field-row">
+
+        <div class="field">
+
+            <label>Package (LPA)</label>
+
+            <input
+            type="number"
+            [(ngModel)]="job.packageLPA"
+            name="package">
+
+        </div>
+
+        <div class="field">
+
+            <label>Minimum CGPA</label>
+
+            <input
+            type="number"
+            [(ngModel)]="job.minCgpa"
+            name="cgpa">
+
+        </div>
+
+        <div class="field">
+
+            <label>Max Backlogs</label>
+
+            <input
+            type="number"
+            [(ngModel)]="job.maxBacklogsAllowed"
+            name="backlogs">
+
+        </div>
+
+    </div>
+
+    <div class="field-row">
+
+        <div class="field">
+
+            <label>Application Deadline</label>
+
+            <input
+            type="date"
+            [(ngModel)]="job.applicationDeadline"
+            name="deadline">
+
+        </div>
+
+        <div class="field">
+
+            <label>Drive Date</label>
+
+            <input
+            type="date"
+            [(ngModel)]="job.driveDate"
+            name="driveDate">
+
+        </div>
+
+    </div>
+
+    <div class="field">
+
+        <label>Eligible Departments</label>
+
+        <div class="chip-group">
+
+            <button
+            type="button"
+            class="chip"
+            *ngFor="let dept of departments"
+            [class.chip--active]="isSelected(dept.id)"
+            (click)="toggleDepartment(dept.id)">
+
+                {{dept.name}}
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="form-actions">
+
+        <button
+        type="submit"
+        class="btn-primary">
+
+            {{ isSubmitting ? 'Posting...' : 'Post Job' }}
+
+        </button>
+
+    </div>
+
+</form>
+
+</section>

@@ -1,0 +1,54 @@
+.profile{
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.profile h1{
+    margin-bottom:20px;
+}
+
+.card{
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+}
+
+label{
+    font-weight:bold;
+}
+
+.skills{
+    margin-top:20px;
+}
+
+.skill{
+    display:inline-block;
+    background:#1976d2;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    margin:5px;
+}
+
+button{
+    margin-top:25px;
+    padding:10px 20px;
+    border:none;
+    background:#1976d2;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#125ea9;
+}

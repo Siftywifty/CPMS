@@ -1,0 +1,126 @@
+<div class="app-layout">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            🎓 Placement Portal
+
+        </div>
+
+        <nav>
+
+            <!-- Student -->
+
+            <ng-container *ngIf="role=='Student'">
+
+                <a routerLink="/student" routerLinkActive="active">🏠 Dashboard</a>
+
+                <a routerLink="/profile">👤 Profile</a>
+
+                <a routerLink="/resume">📄 Resume</a>
+
+                <a routerLink="/applications">💼 Applications</a>
+                <a routerLink="/feedback">Feedback</a>
+
+    <a routerLink="/help-support">Help & Support</a>
+
+            </ng-container>
+
+            <!-- Recruiter -->
+
+            <ng-container *ngIf="role=='Recruiter'">
+
+                <a routerLink="/recruiter">🏠 Dashboard</a>
+
+                <a routerLink="/company-profile">🏢 Company</a>
+
+                <a routerLink="/job-posting">➕ Jobs</a>
+
+                <a routerLink="/candidate-search">🔍 Candidates</a>
+
+                <a routerLink="/interview-schedule">📅 Interviews</a>
+                <a routerLink="/feedback">Feedback</a>
+
+    <a routerLink="/help-support">Help & Support</a>
+
+            </ng-container>
+
+            <!-- Placement Cell -->
+
+            <ng-container *ngIf="role=='Placement Cell'">
+
+                <a routerLink="/placement-cell">🏠 Dashboard</a>
+
+                <a routerLink="/student-management">🎓 Students</a>
+
+                <a routerLink="/company-management">🏢 Companies</a>
+
+                <a routerLink="/training-program">📚 Training</a>
+
+                <a routerLink="/reports">📊 Reports</a>
+
+                <a routerLink="/announcements">📢 Announcements</a>
+                <a routerLink="/feedback">Feedback</a>
+
+    <a routerLink="/help-support">Help & Support</a>
+
+            </ng-container>
+
+        </nav>
+
+        <button
+        class="logout-btn"
+        (click)="logout()">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <!-- Topbar -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h2>
+
+                    College Placement Management System
+
+                </h2>
+
+                <small>
+
+                    {{role}} Portal
+
+                </small>
+
+            </div>
+
+            <div class="top-right">
+
+                <app-notification></app-notification>
+
+                <app-profile-menu></app-profile-menu>
+
+            </div>
+
+        </header>
+
+        <section class="page">
+
+            <router-outlet></router-outlet>
+
+        </section>
+
+    </main>
+
+</div>

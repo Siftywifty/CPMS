@@ -1,0 +1,82 @@
+<section class="form-page">
+
+  <header class="form-head">
+    <p class="eyebrow">Organization</p>
+    <h1>Company profile</h1>
+    <span class="verify-pill" [class.verify-pill--verified]="company?.isVerified">
+      {{ company?.isVerified ? 'Verified by placement cell' : 'Verification pending' }}
+    </span>
+  </header>
+
+  <form (ngSubmit)="onSave()" class="card-form">
+
+  <div class="field">
+    <label>Company Name</label>
+    <input
+      type="text"
+      [(ngModel)]="company.companyName"
+      name="companyName">
+  </div>
+
+  <div class="field-row">
+
+    <div class="field">
+      <label>Industry</label>
+      <input
+        type="text"
+        [(ngModel)]="company.industry"
+        name="industry">
+    </div>
+
+    <div class="field">
+      <label>City</label>
+      <input
+        type="text"
+        [(ngModel)]="company.city"
+        name="city">
+    </div>
+
+  </div>
+
+  <div class="field">
+    <label>Website</label>
+    <input
+      type="text"
+      [(ngModel)]="company.website"
+      name="website">
+  </div>
+
+  <div class="field">
+    <label>About Company</label>
+
+    <textarea
+      rows="4"
+      [(ngModel)]="company.description"
+      name="description">
+    </textarea>
+
+  </div>
+
+  <div class="form-actions">
+
+    <span
+      class="saved-msg"
+      *ngIf="isSaved">
+
+      Profile Saved Successfully!
+
+    </span>
+
+    <button
+      type="submit"
+      class="btn-primary">
+
+      Save Changes
+
+    </button>
+
+  </div>
+
+</form>
+
+</section>

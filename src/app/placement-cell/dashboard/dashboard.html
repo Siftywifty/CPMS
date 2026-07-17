@@ -1,0 +1,119 @@
+<div class="dashboard">
+
+    <!-- Statistics -->
+
+    <div class="stats-grid">
+
+        <div class="card">
+
+            <h3>Total Students</h3>
+
+            <h2>{{totalStudents}}</h2>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Companies</h3>
+
+            <h2>{{companies}}</h2>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Campus Drives</h3>
+
+            <h2>{{drives}}</h2>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Placed Students</h3>
+
+            <h2>{{placedStudents}}</h2>
+
+        </div>
+
+    </div>
+
+    <!-- Charts -->
+
+    <div class="charts-grid">
+
+        <div class="chart-card">
+
+            <canvas id="lineChart"></canvas>
+
+        </div>
+
+        <div class="chart-card">
+
+            <canvas id="pieChart"></canvas>
+
+        </div>
+
+    </div>
+
+    <div class="chart-card full-width">
+
+        <canvas id="placementChart"></canvas>
+
+    </div>
+
+    <!-- Bottom Section -->
+
+    <div class="bottom-section">
+
+        <!-- Recent Placements -->
+
+        <div class="placements-card">
+
+            <h2>Recent Placements</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Student</th>
+
+                        <th>Company</th>
+
+                        <th>Package</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr *ngFor="let item of placements">
+
+                        <td>{{item.student}}</td>
+
+                        <td>{{item.company}}</td>
+
+                        <td>{{item.package}}</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Upcoming Events -->
+
+        <div class="events-card">
+
+            <app-upcoming-events></app-upcoming-events>
+
+        </div>
+
+    </div>
+
+</div>

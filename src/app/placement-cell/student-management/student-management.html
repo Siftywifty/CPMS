@@ -1,0 +1,107 @@
+<section class="student-page">
+
+<div class="header">
+
+<div>
+
+<p class="eyebrow">
+
+Placement Cell
+
+</p>
+
+<h1>
+
+Student Management
+
+</h1>
+
+</div>
+
+</div>
+
+<input
+
+class="search"
+
+placeholder="Search Student..."
+
+[(ngModel)]="search">
+
+<div class="table">
+
+<div class="table-head">
+
+<span>Roll No</span>
+
+<span>Name</span>
+
+<span>Course</span>
+
+<span>CGPA</span>
+
+<span>Status</span>
+
+<span>Action</span>
+
+</div>
+
+<div
+
+class="table-row"
+
+*ngFor="let student of filteredStudents">
+
+<span>{{student.rollNo}}</span>
+
+<span>{{student.name}}</span>
+
+<span>{{student.course}}</span>
+
+<span>{{student.cgpa}}</span>
+
+<span>
+
+<span
+
+class="badge"
+
+[class.placed]="student.status=='Placed'"
+
+[class.notplaced]="student.status=='Not Placed'">
+
+{{student.status}}
+
+</span>
+
+</span>
+
+<span>
+
+<button
+
+class="view"
+
+(click)="view(student)">
+
+View
+
+</button>
+
+<button
+
+class="delete"
+
+(click)="remove(student)">
+
+Remove
+
+</button>
+
+</span>
+
+</div>
+
+</div>
+
+</section>

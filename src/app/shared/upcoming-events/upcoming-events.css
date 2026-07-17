@@ -1,0 +1,53 @@
+.events-card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.events-card h2{
+
+    margin-bottom:20px;
+
+}
+
+.event{
+
+    display:flex;
+
+    gap:15px;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.date{
+
+    width:110px;
+
+    font-weight:bold;
+
+    color:#2563eb;
+
+}
+
+.details h4{
+
+    margin:0;
+
+}
+
+.details span{
+
+    color:#777;
+
+    font-size:14px;
+
+}

@@ -1,0 +1,41 @@
+<div class="notification">
+
+    <button class="bell-btn" (click)="toggleNotifications()">
+
+        🔔
+
+        <span class="badge">
+            {{notifications.length}}
+        </span>
+
+    </button>
+
+    <div class="dropdown" *ngIf="showNotifications">
+
+        <h3>Notifications</h3>
+
+        <div
+            class="item"
+            *ngFor="let n of notifications">
+
+            <div class="icon">
+
+                {{n.icon}}
+
+            </div>
+
+            <div class="content">
+
+                <h4>{{n.title}}</h4>
+
+                <p>{{n.message}}</p>
+
+                <small>{{n.time}}</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

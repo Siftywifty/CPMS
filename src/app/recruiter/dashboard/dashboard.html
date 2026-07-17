@@ -1,0 +1,68 @@
+<section class="dash">
+
+  <header class="dash-hero">
+    <div class="hero-text">
+      <p class="eyebrow">Recruiter console</p>
+      <h1>Your hiring activity</h1>
+    </div>
+    <a routerLink="/recruiter/jobs/new" class="btn-primary">Post a job</a>
+  </header>
+
+  <div class="stat-row">
+    <div class="stat-tile">
+      <span class="stat-value mono">{{ openJobsCount }}</span>
+      <span class="stat-label">Open postings</span>
+    </div>
+    <div class="stat-tile">
+      <span class="stat-value mono">{{ totalApplicants }}</span>
+      <span class="stat-label">Total applicants</span>
+    </div>
+    <div class="stat-tile">
+      <span class="stat-value mono">{{ shortlistedCount }}</span>
+      <span class="stat-label">In interview process</span>
+    </div>
+    <div class="stat-tile stat-tile--accent" *ngIf="selectedCount > 0">
+      <span class="stat-value mono">{{ selectedCount }}</span>
+      <span class="stat-label">Offers extended</span>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Open postings</h2>
+      <a routerLink="/recruiter/job-posting" class="link">New posting</a>
+    </div>
+
+    <p class="empty-state" *ngIf="!isLoading && jobs.length === 0">
+      You haven't posted any jobs yet. Create one to start receiving applications.
+    </p>
+
+    <div class="job-row" *ngFor="let job of jobs">
+      <div>
+        <p class="job-title">{{ job.jobTitle }}</p>
+        <p class="job-meta">{{ job.jobType }} &middot; Min CGPA {{ job.minCgpa }}</p>
+      </div>
+      <span class="status-pill" [ngClass]="'status-' + job.status">{{ job.status }}</span>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Recent applicants</h2>
+      <a routerLink="/recruiter/candidate-search" class="link">Search candidates</a>
+    </div>
+
+    <p class="empty-state" *ngIf="!isLoading && recentApplications.length === 0">
+      No applications yet.
+    </p>
+
+    <div class="app-row" *ngFor="let app of recentApplications">
+      <div>
+        <p class="app-name">{{ app.studentName }}</p>
+        <p class="app-job">{{ app.jobTitle }}</p>
+      </div>
+      <span class="status-pill" [ngClass]="'status-' + app.status">{{ app.status }}</span>
+    </div>
+  </div>
+
+</section>

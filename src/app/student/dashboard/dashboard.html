@@ -1,0 +1,154 @@
+<div class="dashboard">
+
+    <!-- Welcome Card -->
+
+    <div class="welcome-card">
+
+        <div>
+
+            <h1>
+
+                Welcome,
+                {{student.firstName}} {{student.lastName}}
+
+            </h1>
+
+            <p>
+
+                Roll No :
+                {{student.rollNumber}}
+
+            </p>
+
+            <p>
+
+                CGPA :
+                {{student.cgpa}}
+
+            </p>
+
+        </div>
+
+        <div class="profile-progress">
+
+            <span>Profile Completion</span>
+
+            <h2>
+
+                {{profileCompleteness}}%
+
+            </h2>
+
+        </div>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <h3>Total Applications</h3>
+
+            <h1>
+
+                {{applications.length}}
+
+            </h1>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Active Applications</h3>
+
+            <h1>
+
+                {{activeCount}}
+
+            </h1>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Selected</h3>
+
+            <h1>
+
+                {{selectedCount}}
+
+            </h1>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="bottom-section">
+
+        <!-- Applications -->
+
+        <div class="applications-card">
+
+            <div class="heading">
+
+                <h2>Your Applications</h2>
+
+                <a routerLink="/applications">
+
+                    View All
+
+                </a>
+
+            </div>
+
+            <div
+
+            class="application"
+
+            *ngFor="let app of applications">
+
+                <div>
+
+                    <h3>
+
+                        {{app.jobTitle}}
+
+                    </h3>
+
+                    <p>
+
+                        {{app.companyName}}
+
+                    </p>
+
+                </div>
+
+                <span
+
+                class="badge">
+
+                    {{app.status}}
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- Upcoming Events -->
+
+        <div>
+
+            <app-upcoming-events>
+
+            </app-upcoming-events>
+
+        </div>
+
+    </div>
+
+</div>
