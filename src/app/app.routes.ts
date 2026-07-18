@@ -3,12 +3,14 @@ import { Routes } from '@angular/router';
 // ===========================
 // AUTH COMPONENTS
 // ===========================
+import { Home } from './home/home';
 import { Login } from './auth/login/login';
 import { Register } from './auth/register/register';
 import { ForgotPassword } from './auth/forgot-password/forgot-password';
 import { Settings } from './shared/settings/settings';
 import { Feedback } from './shared/feedback/feedback';
 import { HelpSupport } from './shared/help-support/help-support';
+
 
 
 // ===========================
@@ -54,14 +56,17 @@ export const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'Home',
     pathMatch: 'full'
   },
 
   // ===========================
   // AUTH
   // ===========================
-
+ {
+  path: '',
+  component: Home
+},
   {
     path: 'login',
     component: Login
@@ -77,9 +82,14 @@ export const routes: Routes = [
     component: ForgotPassword
   },
   {
+  path: '',
+  component: Home
+},
+  {
   path: 'settings',
   component: Settings
 },
+
 
   // ===========================
   // APP SHELL
